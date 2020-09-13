@@ -100,4 +100,43 @@
       border-bottom: 2px solid $border-color;
     }
   }
+
+  &.opened & {
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__open {
+      $bg-color: $--main-yellow;
+
+      background-color: $bg-color;
+      border: none;
+      width: rem(32);
+      height: rem(32);
+
+      &::after,
+      &::before {
+        content: "";
+        $bg-color: $--real-white;
+  
+        position: absolute;
+        left: 50%;
+        top: 50%;
+  
+        display: block;
+        width: rem(16);
+        height: rem(2);
+        background-color: $bg-color;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+    }
+  }
 }

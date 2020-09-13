@@ -22,10 +22,13 @@
   &__container {
     padding-bottom: rem(100);
     padding-top: rem(50);
+    position: relative;
+    z-index: 1;
 
     @include min-tablet {
       padding-top: rem(140);
       padding-bottom: rem(240);
+      position: static;
     }
 
     @include min-desktop {

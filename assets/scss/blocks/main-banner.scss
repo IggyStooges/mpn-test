@@ -1,13 +1,12 @@
 .main-banner {
   position: absolute;
-  top: rem(50);
+  top: 0;
   right: 0;
   bottom: rem(60);
   left: 50%;
   z-index: 1;
 
   @include min-tablet {
-    top: 0;
     left: rem(200);
     bottom: rem(110);
   }
