@@ -21,7 +21,7 @@
       width: 0%;
       height: rem(4);
       background: $bg-color;
-      animation: ok-progress 0.3s linear forwards;
+      animation: ok-progress 0.1s linear forwards;
       animation-delay: 0.5s;
     }
   }
@@ -42,8 +42,8 @@
       width: 0;
       height: rem(4);
       background: $bg-color;
-      animation: ok-progress 0.5s linear forwards;
-      animation-delay: 0.8s;
+      animation: ok-progress 0.3s linear forwards;
+      animation-delay: 0.6s;
     }
   }
 
