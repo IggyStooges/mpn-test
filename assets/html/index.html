@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/style.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
 </head>
@@ -38,10 +38,13 @@
     <header class="main-header">
         <div class="main-header__top">
             <a href="#" class="main-header__logo">
-              <svg width="55" height="27" viewBox="0 0 55 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="55" height="27">
+                <use xlink:href="/public/img/icon-font/icon-font.svg#icon-logo"></use>
+              </svg>
+              <!-- <svg width="55" height="27" viewBox="0 0 55 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M48.0601 0.823997H41.6196V5.74372L48.0601 10.6634V0.823997Z" fill="white"/>
                 <path d="M50.2821 26.9108C49.6237 26.3677 47.8367 24.7766 44.7348 22.0117C40.0184 17.8093 30.2709 9.12061 28.5146 7.93938C28.0489 7.73522 27.5302 7.77949 27.3207 7.89806C24.5805 9.44875 7.26688 24.755 5.49425 26.5802L0 22.0186C1.17465 20.6593 19.7357 4.08233 23.6491 1.86747C26.0831 0.488966 29.3499 0.457972 31.9702 1.78974C33.3505 2.48981 37.1523 5.73289 49.6564 16.877C52.2093 19.1524 54.4144 21.1173 55 21.6019L50.2821 26.9108Z" fill="#F0C630"/>
-              </svg>      
+              </svg>       -->
             </a>
             <nav class="main-header__nav main-nav">
                 <button type="button" class="main-nav__open"><span class="visually-hidden">открыть мобильное
