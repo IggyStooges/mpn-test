@@ -1,0 +1,26 @@
+.dots {
+  display: flex;
+
+  &__item {
+    $bg-color: $--real-white;
+
+    @include resetting-btn;
+    display: block;
+    width: rem(12);
+    height: rem(12);
+    background-color: $bg-color;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    margin-left: rem(25);
+    border: none;
+    border-radius: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

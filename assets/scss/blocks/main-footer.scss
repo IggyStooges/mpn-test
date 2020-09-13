@@ -1,0 +1,73 @@
+.main-footer {
+  $bg-color: rgba($--real-black, 0.05);
+
+  background-color: $bg-color;
+
+  &__container {
+    @include min-desktop {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__top,
+  &__bottom {
+    @include min-tablet {
+      display: flex;
+    }
+
+    @include min-desktop {
+      width: 50%;
+    }
+  }
+
+  &__dropdown {
+    margin-bottom: rem(15);
+
+    @include min-tablet {
+      width: 50%;
+    }
+
+    &-content {
+      @include reset-list;
+    }
+  }
+
+  &__header {
+    margin-bottom: rem(5);
+    display: block;
+  }
+
+  &__copyright {
+    @include min-tablet {
+      width: 50%;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: rem(5);
+
+    @include min-tablet {
+      width: 50%;
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    $color: rgba($--real-black, 0.5);
+    color: $color;
+    display: inline-block;
+    padding: rem(3) 0;
+    transition: color 0.3s;
+
+    &:hover {
+      $color: $--main-violet;
+      color: $color;
+    }
+  }
+}

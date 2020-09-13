@@ -1,0 +1,76 @@
+@keyframes counter {
+  0% {
+    content: "0";
+  }
+  10% {
+    content: "10";
+  }
+
+  50% {
+    content: "50";
+  }
+
+  100% {
+    content: "100";
+  }
+}
+
+@keyframes start-loader-progress {
+  0% {
+    width: 10%;
+  }
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes ok-progress {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.7;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

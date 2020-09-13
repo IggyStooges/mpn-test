@@ -1,0 +1,35 @@
+.title {
+  $font-weight: $--light;
+  font-weight: $font-weight;
+  margin-top: 0;
+
+  &--main {
+    font-size: rem(24);
+    line-height: rem(32);
+
+    @include min-tablet {
+      font-size: rem(40);
+      line-height: rem(48);
+    }
+  }
+
+  &--secondary {
+    font-size: rem(20);
+    line-height: rem(28);
+
+    @include min-tablet {
+      font-size: rem(28);
+      line-height: rem(36);
+    }
+
+    @include min-desktop {
+      font-size: rem(32);
+      line-height: rem(40);
+    }
+  }
+
+  &--third {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+}

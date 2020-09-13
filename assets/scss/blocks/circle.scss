@@ -1,0 +1,66 @@
+.circle {
+  position: relative;
+  width: rem(240);
+  height: rem(240);
+  background: transparent;
+
+  &__first-line {
+    display: block;
+    width: rem(75);
+    height: rem(4);
+    background: transparent;
+    position: absolute;
+    transform: translate(30px,120px) rotate(45deg);
+    z-index: 5;
+
+    &::before {
+      $bg-color: $--main-yellow;
+
+      content: "";
+      display: block;
+      width: 0%;
+      height: rem(4);
+      background: $bg-color;
+      animation: ok-progress 0.3s linear forwards;
+      animation-delay: 0.5s;
+    }
+  }
+
+  &__second-line {
+    display: block;
+    width: rem(200);
+    height: rem(4);
+    background: transparent;
+    position: absolute;
+    transform: translate(64px,78px) rotate(-45deg);
+    z-index: 5;
+
+    &::before {
+      $bg-color: $--main-yellow;
+      content: "";
+      display: block;
+      width: 0;
+      height: rem(4);
+      background: $bg-color;
+      animation: ok-progress 0.5s linear forwards;
+      animation-delay: 0.8s;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    #circ {
+      fill: $--main-violet;
+      stroke: #ffffff;
+      stroke-width: 4;
+      stroke-dasharray: 628;
+      stroke-dashoffset: 628;
+      animation: progress 0.5s linear forwards;
+    }
+  }
+}

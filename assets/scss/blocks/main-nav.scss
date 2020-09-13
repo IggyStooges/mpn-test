@@ -1,0 +1,103 @@
+.main-nav {
+
+  @include min-tablet {
+    margin-left: auto;
+  }
+
+  &__open {
+    $border-color: $--real-white;
+
+    @include resetting-btn;
+    border: none;
+    height: rem(18);
+    width: rem(22);
+    border-top: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
+    background-color: transparent;
+    position: relative;
+
+    @include min-tablet {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      display: block;
+      width: rem(16);
+      height: rem(2);
+      background-color: $border-color;
+    }
+  }
+
+  &__wrapper {
+    $bg-color: $--dark-violet;
+    
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: rem(50);
+    background-color: $bg-color;
+    padding: rem(25);
+
+    @include min-tablet {
+      display: block;
+      position: static;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  &__list {
+    @include reset-list;
+
+    @include min-tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    @include min-tablet {
+      margin-right: rem(40);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    $color: $--real-white;
+
+    display: inline-block;
+    padding-top: rem(5);
+    padding-bottom: rem(5);
+    color: $color;
+    transition: border 0.3s;
+
+    @include min-tablet {
+      padding-top: rem(15);
+      padding-bottom: rem(13);
+      border-bottom: 2px solid transparent;
+    }
+
+    @include min-desktop {
+      padding-top: rem(30);
+      padding-bottom: rem(28);
+    }
+
+
+    &:hover {
+      $border-color: $--main-yellow;
+
+      border-bottom: 2px solid $border-color;
+    }
+  }
+}

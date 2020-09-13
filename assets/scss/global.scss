@@ -1,0 +1,21 @@
+html {
+  font-size: ($--root-font-size / 16) * 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-size: rem(16);
+  line-height: rem(24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+a {
+  @include resetting-link;
+}

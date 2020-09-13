@@ -1,0 +1,36 @@
+@import "./utils/normalize.scss";
+
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./utils/media.scss";
+@import "./utils/functions.scss";
+@import "./utils/animations.scss";
+
+@import "./global.scss";
+@import "./components/container.scss";
+
+@import "./blocks/content.scss";
+@import "./blocks/start-loader.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main-banner.scss";
+@import "./blocks/plus-minus.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/registration-invitation.scss";
+@import "./blocks/location.scss";
+@import "./blocks/transport-accessibility.scss";
+@import "./blocks/map.scss";
+@import "./blocks/see-more.scss";
+@import "./blocks/registration.scss";
+@import "./blocks/form.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/dropdown.scss";
+@import "./blocks/circle.scss";
+
+@import "./components/btn.scss";
+@import "./components/title.scss";
+@import "./components/checkbox.scss";
+@import "./components/dots.scss";
+
+
+@import "../../node_modules/swiper/swiper-bundle.min.css";

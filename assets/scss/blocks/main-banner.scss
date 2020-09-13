@@ -1,0 +1,55 @@
+.main-banner {
+  position: absolute;
+  top: rem(50);
+  right: 0;
+  bottom: rem(60);
+  left: 50%;
+  z-index: 1;
+
+  @include min-tablet {
+    top: 0;
+    left: rem(200);
+    bottom: rem(110);
+  }
+
+  @include min-desktop {
+    left: rem(280);
+  }
+
+  &__slide {
+    position: relative;
+    overflow: hidden;
+    height: rem(230);
+
+    @include min-tablet {
+      height: rem(500);
+    }
+
+    @include min-desktop {
+      height: rem(530);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: rem(25); 
+
+    @include min-tablet {
+      transform: none;
+      left: rem(200);
+      bottom: rem(50); 
+    }
+
+    @include min-tablet {
+      left: rem(280);
+    }
+  }
+}

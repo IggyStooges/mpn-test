@@ -1,0 +1,50 @@
+.registration {
+  $bg-color: $--main-violet;
+
+  background-color: $bg-color;
+  position: relative;
+
+  &__title {
+    $color: $--real-white;
+
+    color: $color;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include min-desktop {
+      max-width: 50%;
+    }
+
+    &.submitted {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  &__success {
+    $color: $--real-white;
+
+    color: $color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+
+    &.submitted {
+      display: block;
+      z-index: 2;
+      height: 100%;
+    }
+
+    &-container {
+      align-items: center;
+      display: flex;
+      height: 100%;
+    }
+  }
+}

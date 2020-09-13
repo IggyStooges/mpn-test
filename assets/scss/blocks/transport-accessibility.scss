@@ -1,0 +1,57 @@
+.transport-accessibility {
+  @include reset-list;
+
+  margin-top: rem(15);
+
+  @include min-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: rem(-30);
+    margin-right: rem(-30);
+  }
+
+  &__item {
+    margin-bottom: rem(8);
+
+    @include min-tablet {
+      padding: 0 rem(30);
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: rem(5);
+      }
+    }
+  }
+
+  &__metro-line-color {
+    min-width: rem(12);
+    width: rem(12);
+    height: rem(12);
+    display: block;
+    border-radius: 50%;
+    margin-right: rem(15);
+
+    &--phili-line {
+      @include metro-color($--phili-line-color);
+    }
+
+    &--righzskaya-line {
+      @include metro-color($--righzskaya-line-color);
+    }
+  }
+
+  &__location {
+    font: inherit;
+    margin-right: rem(15);
+
+    &a {
+      $color: $--main-violet;
+      color: $color;
+      border-bottom: 1px dashed $color;
+    }
+  }
+}

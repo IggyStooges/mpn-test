@@ -1,0 +1,78 @@
+.start-loader {
+  $bg-color: $--main-violet;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: $bg-color;
+
+  &::before {
+    $color: $--real-white;
+    content: "0";
+    display: block;
+    position: absolute;
+    bottom: rem(70);
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-weight: 300;
+    font-size: rem(56);
+    line-height: rem(56);
+    color: $color;
+    animation: counter 2s ease-in-out forwards;
+  }
+
+  &__progress-bar {
+    position: relative;
+    height: rem(70);
+
+    width: 10%;
+    animation: start-loader-progress 2s cubic-bezier(0, 0.5, 0.5, 1) forwards;
+  }
+
+  &__progress {
+    $bg-color: $--main-yellow;
+
+    width: 100%;
+    height: rem(2);
+    position: absolute;
+    bottom: 0;
+    background-color: $bg-color;
+  }
+
+  &__loading {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+
+    &-scale {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      $bg-color: rgba($--real-white, 0.3);
+      width: 100%;
+      height: rem(1);
+      background-color: $bg-color;
+    }
+  }
+
+  &__logo {
+    width: rem(55);
+    height: rem(27);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    animation: fade-out 2s ease forwards;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

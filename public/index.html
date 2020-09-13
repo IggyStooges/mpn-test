@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="start-loader">
+
+    <div class="start-loader__loading">
+      <div class="start-loader__progress-bar">
+              
+        <div class="start-loader__logo">
+          <svg width="55" height="27">
+            <use xlink:href="/public/img/icon-font/icon-font.svg#icon-logo"></use>
+          </svg>
+          <!-- <svg width="55" height="27" viewBox="0 0 55 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.0601 0.823997H41.6196V5.74372L48.0601 10.6634V0.823997Z" fill="white"/>
+            <path d="M50.2821 26.9108C49.6237 26.3677 47.8367 24.7766 44.7348 22.0117C40.0184 17.8093 30.2709 9.12061 28.5146 7.93938C28.0489 7.73522 27.5302 7.77949 27.3207 7.89806C24.5805 9.44875 7.26688 24.755 5.49425 26.5802L0 22.0186C1.17465 20.6593 19.7357 4.08233 23.6491 1.86747C26.0831 0.488966 29.3499 0.457972 31.9702 1.78974C33.3505 2.48981 37.1523 5.73289 49.6564 16.877C52.2093 19.1524 54.4144 21.1173 55 21.6019L50.2821 26.9108Z" fill="#F0C630"/>
+          </svg>             -->
+        </div>
+        <div class="start-loader__progress">
+        </div>
+        
+      </div>
+      <div class="start-loader__loading-scale">
+      </div>
+    </div>
+   
+  </div>
+  <div class="content content--loading">
+    <header class="main-header">
+        <div class="main-header__top">
+            <a href="#" class="main-header__logo">
+              <svg width="55" height="27" viewBox="0 0 55 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48.0601 0.823997H41.6196V5.74372L48.0601 10.6634V0.823997Z" fill="white"/>
+                <path d="M50.2821 26.9108C49.6237 26.3677 47.8367 24.7766 44.7348 22.0117C40.0184 17.8093 30.2709 9.12061 28.5146 7.93938C28.0489 7.73522 27.5302 7.77949 27.3207 7.89806C24.5805 9.44875 7.26688 24.755 5.49425 26.5802L0 22.0186C1.17465 20.6593 19.7357 4.08233 23.6491 1.86747C26.0831 0.488966 29.3499 0.457972 31.9702 1.78974C33.3505 2.48981 37.1523 5.73289 49.6564 16.877C52.2093 19.1524 54.4144 21.1173 55 21.6019L50.2821 26.9108Z" fill="#F0C630"/>
+              </svg>      
+            </a>
+            <nav class="main-header__nav main-nav">
+                <button type="button" class="main-nav__open"><span class="visually-hidden">открыть мобильное
+                        меню</span></button>
+
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#description" class="main-nav__link">
+                                Описание
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#location" class="main-nav__link">
+                                Локация
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#more" class="main-nav__link">
+                                Смотрите также
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#registration" class="main-nav__link">
+                                Запись на просмотр
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="main-header__container container">
+            <div class="main-header__head">
+                <h1 class="main-header__title title title--main">Многофункциональный жилой квартал HEADLINER</h1>
+                <span>Сдача — 4 кв. 2022, есть сданные</span>
+            </div>
+            <div class="main-header__banner main-banner swiper-container">
+              <div class="main-banner__carousel swiper-wrapper">
+                  <div class="main-banner__slide swiper-slide">
+                      <img src="./img/builds.png" alt="здания">
+                  </div>
+                  <div class="main-banner__slide swiper-slide">
+                    <img src="./img/streshnevo.jpg" alt="здания">
+                  </div>
+                  <div class="main-banner__slide swiper-slide">
+                    <img src="./img/builds.png" alt="здания">
+                </div> 
+                <div class="main-banner__slide swiper-slide">
+                  <img src="./img/builds.png" alt="здания">
+              </div>
+              </div>
+            </div>
+            <div class="main-banner__dots dots">
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+        <section class="plus-minus">
+            <div class="plus-minus__tabs-container">
+                <div class="plus-minus__tabs tabs">
+                    <button type="button" class="tabs__item active">
+                        Плюсы и минусы
+                    </button>
+                    <button type="button" class="tabs__item">
+                        Аэротур
+                    </button>
+                    <button type="button" class="tabs__item">
+                        Планировки
+                    </button>
+                    <button type="button" class="tabs__item">
+                        Застройщик
+                    </button>
+                </div>
+            </div>
+            <div class="plus-minus__container container">
+                <ul class="plus-minus__list">
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Привлекательная архитектура</span>
+                    </li>
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Большой выбор квартир</span>
+                    </li>
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Поразительные виды из окон</span>
+                    </li>
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Сложившийся район со всем необходимым</span>
+                    </li>
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Сравнительно низкие цены</span>
+                    </li>
+                    <li class="plus-minus__item">
+                        <span class="plus-minus__sign plus-minus__sign--plus"></span>
+                        <span>Привлекательная архитектура</span>
+                    </li>
+                </ul>
+                <ul class="plus-minus__list">
+                    <li class="plus-minus__item plus-minus__item--minus">
+                        <span class="plus-minus__sign"></span>
+                        <span>Недостаток собственной инфраструктуры</span>
+                    </li>
+                    <li class="plus-minus__item plus-minus__item--minus">
+                        <span class="plus-minus__sign"></span>
+                        <span>Частые пробки вокруг</span>
+                    </li>
+                    <li class="plus-minus__item plus-minus__item--minus">
+                        <span class="plus-minus__sign"></span>
+                        <span>Не лучшая экология</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="registration-invitation">
+            <div class="registration-invitation__container container container--vertical-paddings">
+                <strong class="registration-invitation__header title title--secondary">
+                    Запишитесь на просмотр и оцените всё сами!
+                </strong>
+                <a href="#registration" class="registration-invitation__btn btn btn--border">
+                    Запись на просмотр
+                </a>
+            </div>
+        </div>
+
+        <section class="location" id="location">
+            <div class="location__container container container--vertical-paddings">
+                <h2 class="location__title title title--secondary">
+                    Локация
+                </h2>
+                <span class="location__address">
+                    Москва, ЦАО, Пресненский, Шмитовский проезд, вл. 39
+                </span>
+                <ul class="location__transport-accessibility-list transport-accessibility">
+                    <li class="transport-accessibility__item">
+                        <div class="transport-accessibility__item-wrapper">
+                            <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--phili-line">
+
+                            </span>
+                            <a class="transport-accessibility__location" href="#">
+                                Шелепиха
+                            </a>
+                            <span class="transport-accessibility__time-to-station">
+                                5 мин пешком
+                            </span>
+                        </div>
+                    </li>
+                    <li class="transport-accessibility__item">
+                        <div class="transport-accessibility__item-wrapper">
+                            <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--phili-line">
+
+                            </span>
+                            <a class="transport-accessibility__location" href="#">
+                                Фили
+                            </a>
+                            <span class="transport-accessibility__time-to-station" href="#">
+                                6 мин на транспорте
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="location__map map">
+                <div id="map" class="map__container">
+
+                </div>
+                <button class="map__infrastructure-open-btn btn"><span>Объекты инфраструктуры</span></button>
+
+                <div class="map__infrastructure">
+                    <ul class="map__infrastructure-list">
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="schools">
+                            <label for="schools" class="checkbox__label">Школы</label>
+                        </li>
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="pharmacy">
+                            <label for="pharmacy" class="checkbox__label">Аптеки</label>
+                        </li>
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="universitys">
+                            <label for="universitys" class="checkbox__label">Высшие учебные заведения</label>
+                        </li>
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="hospitals">
+                            <label for="hospitals" class="checkbox__label">Больницы</label>
+                        </li>
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="shops">
+                            <label for="shops" class="checkbox__label">Магазины</label>
+                        </li>
+                        <li class="map__infrastructure-item checkbox">
+                            <input type="checkbox" class="visually-hidden checkbox__input" id="gyms">
+                            <label for="gyms" class="checkbox__label">Фитнес</label>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="see-more" id="more">
+            <div class="see-more__container container container--vertical-paddings">
+                <h2 class="see-more__title title title--secondary">
+                    Смотрите также
+                </h2>
+
+                <ul class="see-more__list">
+                    <li class="see-more__item">
+                        <a class="see-more__link">
+                            <div class="see-more__img-wrapper">
+                                <img src="./img/medvedkovo.jpg" alt="Медведково">
+                                <div class="see-more__markers">
+                                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#774AA3"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7563 7.70198C18.2242 8.23779 16.0339 9.82418 14.7363 12.0718L12.8752 15.2952L10.1069 16.037C10.0164 16.0612 9.94528 16.1311 9.91952 16.2212L9.43546 17.9134C9.39273 18.0627 9.48619 18.2168 9.63838 18.2479L11.0086 18.5283L16.5511 21.7283L17.479 22.7748C17.5821 22.891 17.7623 22.8949 17.8703 22.7832L19.0937 21.5179C19.1588 21.4506 19.1838 21.354 19.1596 21.2635L18.4178 18.4952L20.2788 15.2718C21.5765 13.0242 21.8552 10.3342 21.0532 7.87341C21.0125 7.74862 20.8847 7.67481 20.7563 7.70198ZM17.2465 14.1239C17.7567 14.4184 18.4091 14.2436 18.7036 13.7335C18.9982 13.2233 18.8234 12.5709 18.3132 12.2764C17.803 11.9818 17.1506 12.1566 16.8561 12.6668C16.5615 13.177 16.7363 13.8293 17.2465 14.1239Z" fill="white"/>
+                                    <path d="M11.1858 24.9604C12.4046 24.6706 13.4548 23.8913 14.0846 22.8005L14.4647 22.1421C14.5383 22.0146 14.4946 21.8515 14.3671 21.7779L12.0577 20.4445C11.9302 20.3709 11.7671 20.4146 11.6934 20.5421L11.3133 21.2005C10.6835 22.2913 10.5337 23.5904 10.8922 24.7909C10.9297 24.9167 11.0581 24.9908 11.1858 24.9604Z" fill="white"/>
+                                  </svg>
+                                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#EE4713"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.17018 10.3404C8.90562 10.0783 8.46252 10.3227 8.54293 10.6862L11.271 23.0218C11.3088 23.1928 11.4604 23.3145 11.6355 23.3145H20.9026C21.0777 23.3145 21.2293 23.1928 21.2671 23.0218L23.9952 10.6862C24.0756 10.3227 23.6325 10.0783 23.3679 10.3404L20.4567 13.2239C20.3528 13.3268 20.1853 13.3268 20.0814 13.2239L16.5318 9.70806C16.3863 9.56395 16.1518 9.56395 16.0063 9.70806L12.4567 13.2239C12.3528 13.3268 12.1853 13.3268 12.0814 13.2239L9.17018 10.3404ZM13.8157 20.1145C13.6979 20.1145 13.6024 20.21 13.6024 20.3278V20.9678C13.6024 21.0857 13.6979 21.1812 13.8157 21.1812H18.7224C18.8402 21.1812 18.9357 21.0857 18.9357 20.9678V20.3278C18.9357 20.21 18.8402 20.1145 18.7224 20.1145H13.8157Z" fill="white"/>
+                                  </svg>                              
+                                </div>
+                                <div class="see-more__info">
+                                    <span class="see-more__price">8 217 030 - 29 070 951₽</span>
+                                    <span class="see-more__amount">569 квартир в продаже</span>
+                                </div>
+                            </div>
+                            <h3 class="see-more__title title title--third">
+                              ЖК «Новое Медведково»
+                            </h3>
+                            <div class="transport-accessibility">
+                                <div class="transport-accessibility__item">
+                                    <span class="transport-accessibility__location">
+                                        Москва, СВАО
+                                    </span>
+                                    <div class="transport-accessibility__item-wrapper">
+                                        <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--righzskaya-line">
+
+                                        </span>
+                                        <span class="transport-accessibility__location">
+                                            Алексеевская
+                                        </span>
+                                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17804 3.13325L3.23738 3.14498C3.29169 3.14884 3.34553 3.16681 3.39254 3.19979L4.80436 4.1904C5.03291 4.35075 5.16772 4.60439 5.16772 4.87399V6.24194C5.16772 6.39848 5.03391 6.52539 4.86883 6.52539C4.70376 6.52539 4.56994 6.39848 4.56994 6.24194V4.87399C4.56994 4.78412 4.52499 4.69958 4.44881 4.64613L3.7308 4.142L3.73132 6.24194C3.73095 6.3952 3.66588 6.54773 3.53766 6.65943L1.93332 8.05704C1.84536 8.13367 1.78363 8.23352 1.75607 8.34372L1.17962 10.6488C1.10343 10.9534 0.781265 11.1418 0.460031 11.0696C0.138798 10.9973 -0.0598545 10.6918 0.0163307 10.3871L0.592784 8.08208C0.675464 7.75146 0.860661 7.45191 1.12452 7.22205L1.93985 6.51109L1.93999 4.04245C1.93999 3.85306 2.03972 3.67618 2.20579 3.57101L2.75636 3.22231C2.88323 3.14195 3.03394 3.11255 3.17804 3.13325ZM2.73078 8.0688L3.60025 7.35424C3.64335 7.38103 3.68325 7.41345 3.71865 7.45123L3.76821 7.51191L5.676 10.2015C5.86027 10.4613 5.78758 10.8136 5.51364 10.9883C5.25928 11.1506 4.92084 11.1028 4.72625 10.8871L4.684 10.8344L2.77621 8.14475C2.75878 8.12018 2.74366 8.09479 2.73078 8.0688L3.60025 7.35424L2.73078 8.0688ZM1.67321 4.94537V5.69595L0.978016 6.26973C0.86728 6.36102 0.705824 6.36128 0.595247 6.27723L0.556353 6.24178C0.460086 6.13676 0.459812 5.98363 0.548436 5.87876L0.585833 5.84189L1.67321 4.94537ZM1.85017 0.804077C2.51045 0.804077 3.04572 1.3117 3.04572 1.93788C3.04572 2.56407 2.51045 3.07169 1.85017 3.07169C1.18988 3.07169 0.654609 2.56407 0.654609 1.93788C0.654609 1.3117 1.18988 0.804077 1.85017 0.804077Z" fill="black"/>
+                                        </svg>
+                                        <span class="transport-accessibility__time-to-station">
+                                            5 мин
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="see-more__item">
+                        <a class="see-more__link">
+                            <div class="see-more__img-wrapper">
+                                <img src="./img/streshnevo.jpg" alt="Стрешнево">
+                                <div class="see-more__markers">
+                                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#FC822A"/>
+                                    <line x1="18.168" y1="10.2684" x2="13.5434" y2="22.4757" stroke="white" stroke-width="2.1" stroke-linecap="round"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4027 16.7611C12.2913 16.7611 13.8223 15.2301 13.8223 13.3415C13.8223 11.4529 12.2913 9.92188 10.4027 9.92188C8.51409 9.92188 6.98308 11.4529 6.98308 13.3415C6.98308 15.2301 8.51409 16.7611 10.4027 16.7611ZM10.3355 14.73C11.0743 14.73 11.6732 14.1311 11.6732 13.3924C11.6732 12.6536 11.0743 12.0547 10.3355 12.0547C9.59672 12.0547 8.99783 12.6536 8.99783 13.3924C8.99783 14.1311 9.59672 14.73 10.3355 14.73Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5972 22.3147C23.4858 22.3147 25.0169 20.7837 25.0169 18.8951C25.0169 17.0065 23.4858 15.4755 21.5972 15.4755C19.7086 15.4755 18.1776 17.0065 18.1776 18.8951C18.1776 20.7837 19.7086 22.3147 21.5972 22.3147ZM21.53 20.2837C22.2688 20.2837 22.8676 19.6848 22.8676 18.946C22.8676 18.2072 22.2688 17.6083 21.53 17.6083C20.7912 17.6083 20.1923 18.2072 20.1923 18.946C20.1923 19.6848 20.7912 20.2837 21.53 20.2837Z" fill="white"/>
+                                  </svg>
+                                </div>
+                                <div class="see-more__info">
+                                    <span class="see-more__price">8 217 030 - 29 070 951₽</span>
+                                    <span class="see-more__amount">569 квартир в продаже</span>
+                                </div>
+                            </div>
+                            <h3 class="see-more__title title title--third">
+                                ЖК «Level Стрешнево» (Левел Стрешнево)
+                            </h3>
+                            <div class="transport-accessibility">
+                                <div class="transport-accessibility__item">
+                                    <span class="transport-accessibility__location">
+                                        Москва, СВАО
+                                    </span>
+                                    <div class="transport-accessibility__item-wrapper">
+                                        <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--righzskaya-line">
+
+                                        </span>
+                                        <span class="transport-accessibility__location">
+                                            Алексеевская
+                                        </span>
+                                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17804 3.13325L3.23738 3.14498C3.29169 3.14884 3.34553 3.16681 3.39254 3.19979L4.80436 4.1904C5.03291 4.35075 5.16772 4.60439 5.16772 4.87399V6.24194C5.16772 6.39848 5.03391 6.52539 4.86883 6.52539C4.70376 6.52539 4.56994 6.39848 4.56994 6.24194V4.87399C4.56994 4.78412 4.52499 4.69958 4.44881 4.64613L3.7308 4.142L3.73132 6.24194C3.73095 6.3952 3.66588 6.54773 3.53766 6.65943L1.93332 8.05704C1.84536 8.13367 1.78363 8.23352 1.75607 8.34372L1.17962 10.6488C1.10343 10.9534 0.781265 11.1418 0.460031 11.0696C0.138798 10.9973 -0.0598545 10.6918 0.0163307 10.3871L0.592784 8.08208C0.675464 7.75146 0.860661 7.45191 1.12452 7.22205L1.93985 6.51109L1.93999 4.04245C1.93999 3.85306 2.03972 3.67618 2.20579 3.57101L2.75636 3.22231C2.88323 3.14195 3.03394 3.11255 3.17804 3.13325ZM2.73078 8.0688L3.60025 7.35424C3.64335 7.38103 3.68325 7.41345 3.71865 7.45123L3.76821 7.51191L5.676 10.2015C5.86027 10.4613 5.78758 10.8136 5.51364 10.9883C5.25928 11.1506 4.92084 11.1028 4.72625 10.8871L4.684 10.8344L2.77621 8.14475C2.75878 8.12018 2.74366 8.09479 2.73078 8.0688L3.60025 7.35424L2.73078 8.0688ZM1.67321 4.94537V5.69595L0.978016 6.26973C0.86728 6.36102 0.705824 6.36128 0.595247 6.27723L0.556353 6.24178C0.460086 6.13676 0.459812 5.98363 0.548436 5.87876L0.585833 5.84189L1.67321 4.94537ZM1.85017 0.804077C2.51045 0.804077 3.04572 1.3117 3.04572 1.93788C3.04572 2.56407 2.51045 3.07169 1.85017 3.07169C1.18988 3.07169 0.654609 2.56407 0.654609 1.93788C0.654609 1.3117 1.18988 0.804077 1.85017 0.804077Z" fill="black"/>
+                                        </svg>
+                                        <span class="transport-accessibility__time-to-station">
+                                            5 мин
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="see-more__item">
+                        <a class="see-more__link">
+                            <div class="see-more__img-wrapper">
+                                <img src="./img/lubercu.jpg" alt="«Люберецкий»">
+                                <div class="see-more__markers">
+                                    
+                                </div>
+                                <div class="see-more__info">
+                                    <span class="see-more__price">8 217 030 - 29 070 951₽</span>
+                                    <span class="see-more__amount">569 квартир в продаже</span>
+                                </div>
+                            </div>
+                            <h3 class="see-more__title title title--third">
+                              ЖК «Люберецкий»
+                            </h3>
+                            <div class="transport-accessibility">
+                                <div class="transport-accessibility__item">
+                                    <span class="transport-accessibility__location">
+                                        Москва, СВАО
+                                    </span>
+                                    <div class="transport-accessibility__item-wrapper">
+                                        <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--righzskaya-line">
+
+                                        </span>
+                                        <span class="transport-accessibility__location">
+                                            Алексеевская
+                                        </span>
+                                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17804 3.13325L3.23738 3.14498C3.29169 3.14884 3.34553 3.16681 3.39254 3.19979L4.80436 4.1904C5.03291 4.35075 5.16772 4.60439 5.16772 4.87399V6.24194C5.16772 6.39848 5.03391 6.52539 4.86883 6.52539C4.70376 6.52539 4.56994 6.39848 4.56994 6.24194V4.87399C4.56994 4.78412 4.52499 4.69958 4.44881 4.64613L3.7308 4.142L3.73132 6.24194C3.73095 6.3952 3.66588 6.54773 3.53766 6.65943L1.93332 8.05704C1.84536 8.13367 1.78363 8.23352 1.75607 8.34372L1.17962 10.6488C1.10343 10.9534 0.781265 11.1418 0.460031 11.0696C0.138798 10.9973 -0.0598545 10.6918 0.0163307 10.3871L0.592784 8.08208C0.675464 7.75146 0.860661 7.45191 1.12452 7.22205L1.93985 6.51109L1.93999 4.04245C1.93999 3.85306 2.03972 3.67618 2.20579 3.57101L2.75636 3.22231C2.88323 3.14195 3.03394 3.11255 3.17804 3.13325ZM2.73078 8.0688L3.60025 7.35424C3.64335 7.38103 3.68325 7.41345 3.71865 7.45123L3.76821 7.51191L5.676 10.2015C5.86027 10.4613 5.78758 10.8136 5.51364 10.9883C5.25928 11.1506 4.92084 11.1028 4.72625 10.8871L4.684 10.8344L2.77621 8.14475C2.75878 8.12018 2.74366 8.09479 2.73078 8.0688L3.60025 7.35424L2.73078 8.0688ZM1.67321 4.94537V5.69595L0.978016 6.26973C0.86728 6.36102 0.705824 6.36128 0.595247 6.27723L0.556353 6.24178C0.460086 6.13676 0.459812 5.98363 0.548436 5.87876L0.585833 5.84189L1.67321 4.94537ZM1.85017 0.804077C2.51045 0.804077 3.04572 1.3117 3.04572 1.93788C3.04572 2.56407 2.51045 3.07169 1.85017 3.07169C1.18988 3.07169 0.654609 2.56407 0.654609 1.93788C0.654609 1.3117 1.18988 0.804077 1.85017 0.804077Z" fill="black"/>
+                                        </svg>
+                                        <span class="transport-accessibility__time-to-station">
+                                            5 мин
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="see-more__item">
+                        <a class="see-more__link">
+                            <div class="see-more__img-wrapper">
+                                <img src="./img/izmailovo.jpg" alt="измайлово">
+                                <div class="see-more__markers">
+                                    
+                                </div>
+                                <div class="see-more__info">
+                                    <span class="see-more__price">8 217 030 - 29 070 951₽</span>
+                                    <span class="see-more__amount">569 квартир в продаже</span>
+                                </div>
+                            </div>
+                            <h3 class="see-more__title title title--third">
+                              ЖК «Измайловский лес»
+                            </h3>
+                            <div class="transport-accessibility">
+                                <div class="transport-accessibility__item">
+                                    <span class="transport-accessibility__location">
+                                        Москва, СВАО
+                                    </span>
+                                    <div class="transport-accessibility__item-wrapper">
+                                        <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--righzskaya-line">
+
+                                        </span>
+                                        <span class="transport-accessibility__location">
+                                            Алексеевская
+                                        </span>
+                                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17804 3.13325L3.23738 3.14498C3.29169 3.14884 3.34553 3.16681 3.39254 3.19979L4.80436 4.1904C5.03291 4.35075 5.16772 4.60439 5.16772 4.87399V6.24194C5.16772 6.39848 5.03391 6.52539 4.86883 6.52539C4.70376 6.52539 4.56994 6.39848 4.56994 6.24194V4.87399C4.56994 4.78412 4.52499 4.69958 4.44881 4.64613L3.7308 4.142L3.73132 6.24194C3.73095 6.3952 3.66588 6.54773 3.53766 6.65943L1.93332 8.05704C1.84536 8.13367 1.78363 8.23352 1.75607 8.34372L1.17962 10.6488C1.10343 10.9534 0.781265 11.1418 0.460031 11.0696C0.138798 10.9973 -0.0598545 10.6918 0.0163307 10.3871L0.592784 8.08208C0.675464 7.75146 0.860661 7.45191 1.12452 7.22205L1.93985 6.51109L1.93999 4.04245C1.93999 3.85306 2.03972 3.67618 2.20579 3.57101L2.75636 3.22231C2.88323 3.14195 3.03394 3.11255 3.17804 3.13325ZM2.73078 8.0688L3.60025 7.35424C3.64335 7.38103 3.68325 7.41345 3.71865 7.45123L3.76821 7.51191L5.676 10.2015C5.86027 10.4613 5.78758 10.8136 5.51364 10.9883C5.25928 11.1506 4.92084 11.1028 4.72625 10.8871L4.684 10.8344L2.77621 8.14475C2.75878 8.12018 2.74366 8.09479 2.73078 8.0688L3.60025 7.35424L2.73078 8.0688ZM1.67321 4.94537V5.69595L0.978016 6.26973C0.86728 6.36102 0.705824 6.36128 0.595247 6.27723L0.556353 6.24178C0.460086 6.13676 0.459812 5.98363 0.548436 5.87876L0.585833 5.84189L1.67321 4.94537ZM1.85017 0.804077C2.51045 0.804077 3.04572 1.3117 3.04572 1.93788C3.04572 2.56407 2.51045 3.07169 1.85017 3.07169C1.18988 3.07169 0.654609 2.56407 0.654609 1.93788C0.654609 1.3117 1.18988 0.804077 1.85017 0.804077Z" fill="black"/>
+                                        </svg>
+                                        <span class="transport-accessibility__time-to-station">
+                                            5 мин
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="see-more__item">
+                        <a class="see-more__link">
+                            <div class="see-more__img-wrapper">
+                                <img src="" alt="">
+                                <div class="see-more__markers">
+                                    маркеры
+                                </div>
+                                <div class="see-more__info">
+                                    <span class="see-more__price">8 217 030 - 29 070 951₽</span>
+                                    <span class="see-more__amount">569 квартир в продаже</span>
+                                </div>
+                            </div>
+                            <h3 class="see-more__title title title--third">
+                                ЖК «Level Стрешнево» (Левел Стрешнево)
+                            </h3>
+                            <div class="transport-accessibility">
+                                <div class="transport-accessibility__item">
+                                    <span class="transport-accessibility__location">
+                                        Москва, СВАО
+                                    </span>
+                                    <div class="transport-accessibility__item-wrapper">
+                                        <span class="transport-accessibility__metro-line-color transport-accessibility__metro-line-color--righzskaya-line">
+
+                                        </span>
+                                        <span class="transport-accessibility__location">
+                                            Алексеевская
+                                        </span>
+                                        <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17804 3.13325L3.23738 3.14498C3.29169 3.14884 3.34553 3.16681 3.39254 3.19979L4.80436 4.1904C5.03291 4.35075 5.16772 4.60439 5.16772 4.87399V6.24194C5.16772 6.39848 5.03391 6.52539 4.86883 6.52539C4.70376 6.52539 4.56994 6.39848 4.56994 6.24194V4.87399C4.56994 4.78412 4.52499 4.69958 4.44881 4.64613L3.7308 4.142L3.73132 6.24194C3.73095 6.3952 3.66588 6.54773 3.53766 6.65943L1.93332 8.05704C1.84536 8.13367 1.78363 8.23352 1.75607 8.34372L1.17962 10.6488C1.10343 10.9534 0.781265 11.1418 0.460031 11.0696C0.138798 10.9973 -0.0598545 10.6918 0.0163307 10.3871L0.592784 8.08208C0.675464 7.75146 0.860661 7.45191 1.12452 7.22205L1.93985 6.51109L1.93999 4.04245C1.93999 3.85306 2.03972 3.67618 2.20579 3.57101L2.75636 3.22231C2.88323 3.14195 3.03394 3.11255 3.17804 3.13325ZM2.73078 8.0688L3.60025 7.35424C3.64335 7.38103 3.68325 7.41345 3.71865 7.45123L3.76821 7.51191L5.676 10.2015C5.86027 10.4613 5.78758 10.8136 5.51364 10.9883C5.25928 11.1506 4.92084 11.1028 4.72625 10.8871L4.684 10.8344L2.77621 8.14475C2.75878 8.12018 2.74366 8.09479 2.73078 8.0688L3.60025 7.35424L2.73078 8.0688ZM1.67321 4.94537V5.69595L0.978016 6.26973C0.86728 6.36102 0.705824 6.36128 0.595247 6.27723L0.556353 6.24178C0.460086 6.13676 0.459812 5.98363 0.548436 5.87876L0.585833 5.84189L1.67321 4.94537ZM1.85017 0.804077C2.51045 0.804077 3.04572 1.3117 3.04572 1.93788C3.04572 2.56407 2.51045 3.07169 1.85017 3.07169C1.18988 3.07169 0.654609 2.56407 0.654609 1.93788C0.654609 1.3117 1.18988 0.804077 1.85017 0.804077Z" fill="black"/>
+                                        </svg>
+                                        <span class="transport-accessibility__time-to-station">
+                                            5 мин
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="registration" id="registration">
+            <div class="registration__container container container--vertical-paddings">
+                <div class="registration__wrapper">
+                    <h2 class="registration__title title title--secondary">Запишитесь на просмотр и оцените всё сами!
+                    </h2>
+                    <form class="registration__form form">
+                        <input type="text" placeholder="Как вас зовут?" name="name" id="name" class="form__input error">
+
+                        <div class="form__selects-wrapper">
+                            <select name="date" id="date" class="form__input form__input--half">
+                                <option value="16.09">16 сентября</option>
+                                <option value="16.09">14 сентября</option>
+                            </select>
+                            <select name="time" id="time" class="form__input form__input--half">
+                                <option value="14:00">14:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+                        <input type="tel" placeholder="Ваш телефон" name="phone" id="phone" class="form__input">
+                        <div class="form__checkbox checkbox checkbox--yellow">
+                            <input type="checkbox" class="checkbox__input visually-hidden" id="reminder">
+                            <label for="reminder" class="checkbox__label">Напомните мне за 2 часа до визита</label>
+                        </div>
+
+                        <button type="submit" class="form__btn btn btn--main" disabled="">Отправить</button>
+                    </form>
+                </div>
+                <div class="registration__success">
+                  <div class="container registration__success-container">
+                    <div class="registration__success-ok">
+                      <div class="circle">
+
+                        <div class="circle__first-line">
+          
+                        </div>
+                        <div class="circle__second-line">
+          
+                        </div>
+          
+                        <svg class="circle__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="240" viewBox="0 0 240 240">
+                          <circle id="circ" transform="rotate(-90 105 105)" cx="105" cy="105" r="100"></circle>
+                        </svg>
+          
+                    </div>
+                    </div>
+                    <div class="registration__success-wrapper">
+                      <h3 class="title title--secondary">Вы успешно записались на просмотр в ЖК Headliner!</h3>
+                      <span>Мы ждем вас 16 сентября в 16:00</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="main-footer__container container container--vertical-paddings">
+            <div class="main-footer__top">
+                <div class="main-footer__dropdown dropdown opened">
+                    <span class="main-footer__header dropdown__header">
+                        Новостройки
+                    </span>
+                    <ul class="main-footer__dropdown-content dropdown__content">
+                        <li>
+                            <a href="#" class="main-footer__link">Квартиры в Москве</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">Квартиры в Новой Москве</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">Квартиры в Подмосковье</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">В Москве</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">В Подмосковье</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">В Новой Москве</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-footer__dropdown dropdown">
+                    <span class="main-footer__header dropdown__header">
+                        Популярное
+                    </span>
+                    <ul class="main-footer__dropdown-content dropdown__content">
+                        <li>
+                            <a href="#" class="main-footer__link">В рассрочку</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">Военная ипотека</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">До 4 млн</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">До 6 млн</a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-footer__link">Внутри МКАД</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-footer__bottom">
+                <div class="main-footer__contacts">
+                    <span class="main-footer__header">Рекламный отдел</span>
+                    <div class="main-footer__contacts-data">
+                        <a href="tel:+74959874247" class="main-footer__link">+7 (495) 987-42-47 доб. 501</a>
+                        <a href="mailto:kp@novostroy-m.ru" class="main-footer__link">kp@novostroy-m.ru</a>
+                    </div>
+                </div>
+                <div class="main-footer__copyright">
+                    <span class="main-footer__header">© 2011—2020 Новострой-М</span>
+                    <span class="main-footer__header">Всё, что нужно знать о новостройках</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+
+
+
+</body></html>

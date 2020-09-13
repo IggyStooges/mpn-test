@@ -1,0 +1,31 @@
+.registration-invitation {
+  $bg-color: $--main-violet;
+  $color: $--real-white;
+
+  background-color: $bg-color;
+  color: $color;
+
+  &__header {
+    display: block;
+    margin-bottom: rem(15);
+  }
+
+  &__btn {
+    color: inherit;
+    max-width: rem(270);
+  }
+
+  &__container {
+    @include min-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__header {
+    @include min-desktop {
+      max-width: 50%;
+    }
+  }
+}

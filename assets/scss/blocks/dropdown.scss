@@ -1,0 +1,42 @@
+.dropdown {
+  &__header {
+    position: relative;
+
+    &::before {
+      @include max-mobile {
+        $border-color: $--real-black;
+        content: "";
+        display: block;
+        width: rem(10);
+        height: rem(10);
+        border-top: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+        transform: translateY(-50%) rotate(-225deg);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &__content {
+    @include max-mobile {
+      display: none;
+    }
+  }
+
+  &.opened & {
+    &__content {
+      @include max-mobile {
+        display: block;
+      }
+    }
+
+    &__header {
+      &::before {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.main-header {
+  $bg-color: $--main-violet;
+
+  background-color: $bg-color;
+  position: relative;
+
+  &__logo {
+    width: rem(27);
+    height: rem(13);
+
+    @include min-tablet {
+      width: rem(55);
+      height: rem(26);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    padding-bottom: rem(100);
+    padding-top: rem(50);
+
+    @include min-tablet {
+      padding-top: rem(140);
+      padding-bottom: rem(240);
+    }
+
+    @include min-desktop {
+      padding-bottom: rem(280);
+    }
+  }
+
+  &__top {
+    $border-color: $--real-white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(15) rem(25);
+    height: rem(50);
+    border-bottom: rem(1) solid $border-color;
+    position: relative;
+    z-index: 2;
+
+    @include min-tablet {
+      height: auto;
+      padding: 0 rem(30);
+    }
+  }
+
+  &__head {
+    $color: $--real-white;
+    color: $color;
+    position: relative;
+    z-index: 2;
+  }
+}

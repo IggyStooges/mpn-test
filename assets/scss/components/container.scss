@@ -1,0 +1,31 @@
+.container {
+  padding-left: rem(25);
+  padding-right: rem(25);
+  margin: 0 auto;
+  max-width: rem(1200);
+
+  @include min-tablet {
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+
+  @include min-desktop {
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
+
+  &--vertical-paddings {
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+
+    @include min-tablet {
+      padding-top: rem(45);
+      padding-bottom: rem(45);
+    }
+
+    @include min-desktop {
+      padding-top: rem(55);
+      padding-bottom: rem(55);
+    }
+  }
+}

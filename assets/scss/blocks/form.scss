@@ -1,0 +1,58 @@
+.form {
+  $color: $--real-white;
+
+  color: $color;
+
+  &__input {
+    $border-color: $--main-yellow;
+
+    @include placeholder {
+      color: rgba($color, 0.5);
+    }
+
+    border: none;
+    background-color: transparent;
+    border-bottom: rem(1) solid $border-color;
+    width: 100%;
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    margin-bottom: rem(15);
+    color: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &.error {
+      $border-color: $--error-red;
+      
+      border-color: $border-color;
+    }
+
+    &--half {
+      @include min-tablet {
+        width: 48%;
+      }
+    }
+  }
+
+  &__btn {
+    width: rem(270);
+    margin-top: rem(25);
+
+    @include min-tablet {
+      width: auto;
+    }
+  }
+
+  &__selects-wrapper {
+    @include min-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
