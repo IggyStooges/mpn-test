@@ -5,9 +5,7 @@ Swiper.use([Pagination, Autoplay]);
 export default function initCarousel() {
   const swiper = new Swiper(".swiper-container", {
     loop: true,
-    autoplay: {
-      delay: 2500,
-    },
+    autoplay: true,
     simulateTouch: false,
     pagination: {
       el: ".main-banner__dots",
